@@ -67,14 +67,14 @@ function TransactionForm({
     <div className="mt-7">
       <Form
         layout="vertical"
-        className="grid grid-cols-4 gap-5"
+        className="grid grid-cols-1 lg:grid-cols-4 gap-5"
         onFinish={onFinish}
         initialValues={initialValues}
       >
         <Form.Item
           label="Type"
-          className="col-span-1"
           name="type"
+          className="col-span-4 lg:col-span-1"
           rules={[{ required: true, message: "Please select a type!" }]}
         >
           <Select
@@ -85,17 +85,17 @@ function TransactionForm({
 
         <Form.Item
           label="Date"
-          className="col-span-1"
           name="date"
           rules={[{ required: true, message: "Please select a date!" }]}
+          className="col-span-4 lg:col-span-1"
         >
           <Input type="date" />
         </Form.Item>
 
         <Form.Item
           label="Amount"
-          className="col-span-1"
           name="amount"
+          className="col-span-4 lg:col-span-1"
           rules={[{ required: true, message: "Please input an amount!" }]}
         >
           <Input type="number" />
@@ -103,7 +103,6 @@ function TransactionForm({
 
         <Form.Item
           label="Category"
-          className="col-span-1"
           name="category"
           rules={[{ required: true, message: "Please select a category!" }]}
         >

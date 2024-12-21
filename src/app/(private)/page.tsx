@@ -46,7 +46,7 @@ function Homepage() {
       )}
       {!loading && (
         <div>
-          <div className="grid grid-cols-4 gap-5 mt-5">
+          <div className="grid lg:grid-cols-4 gap-5 mt-5">
             <DashboardCard
               title="Total Credits"
               value={reportsData.totalCreditsAmount}
